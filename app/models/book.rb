@@ -7,5 +7,5 @@ class Book < ActiveRecord::Base
     #validates :price, presence: true
     validates :publish, presence: true
     validates :published, presence: true
-    validates :cd, presence: true
+    #validates :cd, presence: true # cd 값은 없을수도 있음 주석처리
 end
