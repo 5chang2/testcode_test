@@ -2,7 +2,7 @@ require 'test_helper'
 
 class BooksControllerTest < ActionController::TestCase
   setup do
-    @book = books(:one)
+    @book = books(:one)   #books.yml 파일에서 생성했던 one: 
   end
 
   test "should get index" do
