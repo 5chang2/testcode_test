@@ -399,5 +399,18 @@ title 테스 안의 값 확인 테스트
 ```ruby
 assert_select 'title', "LikeLion"
 ```
+view가 2개의 순서가 있는 목록(ol)을 가지고 있고 각각이 4개의 목록 요소(li)를 가진다고 하면, 
+다음 테스트는 모두 통과합니다.
+```ruby
+assert_select "ol" do |elements|
+  elements.each do |element|
+    assert_select element, "li", 4
+  end
+end
+ 
+assert_select "ol" do
+  assert_select "li", 8
+end
+```
 
 
